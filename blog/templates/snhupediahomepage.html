@@ -7,7 +7,7 @@
 <!-- load navbar and content from snhupediabase.html -->
 {% block content %}
 
-<!-- intro paragraph -->
+<!-- intro and about section -->
     <div class="snhupedia-box-shadow snhupedia-box-color container border p-5 my-5">
       <h1>About</h1>
       <p>This is an unofficial* wiki containing entertaining knowledge about Southern New Hampshire University...</p>
@@ -19,7 +19,7 @@
     <div class="snhupedia-box-shadow snhupedia-box-color container border p-5 my-5">
         <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
         <p>{{ post.body }}</p>
-        <p class="text-secondary">Last edited by: Example on: 12/8/22</p>
+        <p class="text-secondary">Created by: {{ post.author }}<br>Edited on {{ post.modified }}</p>
     </div>
     {% endfor %}
 
