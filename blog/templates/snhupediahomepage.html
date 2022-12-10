@@ -8,18 +8,18 @@
 {% block content %}
 
 <!-- intro and about section -->
-    <div class="snhupedia-box-shadow snhupedia-box-color container border p-5 my-5">
-      <h1>About</h1>
-      <p>This is an unofficial* wiki containing entertaining knowledge about Southern New Hampshire University...</p>
+    <div class="snhupedia-box-shadow bg-secondary container border p-5 my-5">
+      <h1 class="text-white" style="font-family: 'Merriweather'">About</h1>
+      <p class="text-white" style="font-size:130%">This is an unofficial wiki containing entertaining knowledge about Southern New Hampshire University.</p>
     </div>
 
 <!-- wiki entries preview -->
 
     {% for post in post_list %}
-    <div class="snhupedia-box-shadow snhupedia-box-color container border p-5 my-5">
-        <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
-        <p>{{ post.body }}</p>
-        <p class="text-secondary">Created by: {{ post.author }}<br>Edited on {{ post.modified }}</p>
+    <div class="snhupedia-box-shadow snhupedia-box-color container border p-4 my-4">
+        <h2 style="font-size:250%"><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+        <p style="font-size:150%">{{ post.body|slice:":50" }}... <a href="{% url 'post_detail' post.pk %}" style="font-size: 70%">Read more</a></p>
+        <p class="text-secondary" style="font-family: 'Roboto Mono'; font-size: 100%">Created by: {{ post.author }}<br>Edited on {{ post.modified }}</p>
     </div>
     {% endfor %}
 
