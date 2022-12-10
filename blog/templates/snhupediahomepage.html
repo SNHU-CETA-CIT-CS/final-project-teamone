@@ -14,12 +14,14 @@
     </div>
 
 <!-- wiki entries preview -->
-{% for post in post_list %}
-    <div>
+
+    {% for post in post_list %}
+    <div class="snhupedia-box-shadow snhupedia-box-color container border p-5 my-5">
         <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
         <p>{{ post.body }}</p>
+        <p class="text-secondary">Last edited by: Example on: 12/8/22</p>
     </div>
-{% endfor %}
+    {% endfor %}
 
 <!-- div for testing (remove after) -->
 <div style="margin-top:1500px">(remove this after testing!)</div>
