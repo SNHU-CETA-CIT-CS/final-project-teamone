@@ -1,0 +1,16 @@
+.snhupedia-title {
+    font-family: 'Merriweather', serif;
+    font-size: 220%;
+}
+
+.snhupedia-box-shadow {
+    box-shadow: 3px 3px 7px;
+}
+
+.snhupedia-box-color {
+    background-color: #f3f3f3;
+}
+
+.snhupedia-monospace {
+    font-family: 'Roboto Mono', monospace;
+}
