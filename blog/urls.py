@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 __author__ = "Christopher Phillips, christopher.phillips9@snhu.edu"
 
+from django.conf import settings, urls
+from django.conf.urls.static import static
+from django.contrib import admin
 from django.urls import path
 from .views import (
     BlogListView,
@@ -15,6 +18,5 @@ urlpatterns = [
     path("post/<int:pk>/", BlogDetailView.as_view(), name="post_detail"),
     path("post/<int:pk>/edit/", BlogUpdateView.as_view(), name="post_edit"),
     path("post/<int:pk>/delete/", BlogDeleteView.as_view(), name="post_delete"),
-    path('', BlogListView.as_view(), name='home')
+    path('', BlogListView.as_view(), name='home'),
 ]
-
