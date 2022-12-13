@@ -12,7 +12,7 @@ class Post(models.Model):
         "auth.User",
         on_delete=models.CASCADE,
     )
-    # image = models.ImageField(upload_to='featured_image/%Y/%m/%d/')
+    image = models.ImageField(upload_to='featured_image/%Y/%m/%d/')
     body = models.TextField()
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
