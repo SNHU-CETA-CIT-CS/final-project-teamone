@@ -16,5 +16,7 @@
         <div class="text-center text-white font-weight-bold snhupedia-monospace">Revisions:</div>
         <div class="text-white m-2 snhupedia-monospace">Created by: <p1 class="font-italic">{{ post.author }} on {{ post.created }}</p1></div>
         <div class="text-white m-2 snhupedia-monospace">Last modified on: <p1 class="font-italic">{{ post.modified }}</p1></div>
+        <br>
+        <button type="button" class="btn btn-secondary"><a href="{% url 'post_edit' post.pk %}" class="text-white">Edit Article</a></button>
     </div>
 {% endblock content %}
