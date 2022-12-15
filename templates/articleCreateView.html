@@ -5,10 +5,12 @@
 
 <div class="snhupedia-box-shadow snhupedia-box-color container border p-5 my-5 snhupedia-box-color">
     <h1>Create Article:</h1><br>
+        <p class="form-control p-3">
         <form action="" method="post">{% csrf_token %}
             {{ form.as_p }}
-            <input type="submit" value="Save">
+             <input type="submit" value="Create Post" class="btn btn-success m-2">
         </form>
+        </p>
 </div>
 
 {% endblock content %}
