@@ -6,8 +6,13 @@
     <div class="snhupedia-box-shadow snhupedia-box-color container border p-5 my-5 snhupedia-box-color">
         <h1>Delete Article:</h1><br>
         <form action="" method="post">{% csrf_token %}
-            <p>Are you sure you want to delete tdoiewejoifeoiejvoifdm"{{ post.title }}"?</p>
-            <input type="submit" value="Confirm" class="btn btn-danger">
+            <div class="d-flex justify-content-center">
+            <p>Are you sure you want to delete <b>{{ post.title }}</b>?</p>
+            </div>
+            <div class="d-flex justify-content-center">
+                <input type="submit" value="Delete {{ post.title }}" class="btn btn-danger m-2">
+                <button type="button" class="btn btn-secondary m-2"><a href="{% url 'post_edit' post.pk %}" class="text-white">Go back</a></button>
+            </div>
         </form>
 
 {% endblock content %}
