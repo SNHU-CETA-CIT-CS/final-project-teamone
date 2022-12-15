@@ -6,7 +6,7 @@
  <!-- The main paragraph, including picture and all -->
         <div class="snhupedia-box-shadow snhupedia-box-color container border p-5 my-5">
         <h1 class="text-center">{{ post.title }}</h1>
-        <img src="/static/images/articleimgs/shapiroLibrary.png" class="rounded mx-auto d-block img-fluid" alt="Article Image">
+        <img src="{{ post.image.url }}" class="rounded mx-auto d-block img-fluid" alt="Article Image">
         <p class="p-3">{{ post.body }}</p>
     </div>
 
