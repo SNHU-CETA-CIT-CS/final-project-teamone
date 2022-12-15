@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+{% extends "snhupediabase.html" %}
+
+{% block content %}
+
+<div class="snhupedia-box-shadow snhupedia-box-color container border p-5 my-5 snhupedia-box-color">
+    <h1>Create Article:</h1><br>
+        <form action="" method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Save">
+        </form>
+</div>
+
+{% endblock content %}
